@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import {
   Box,
@@ -15,7 +15,6 @@ import {
   CircularProgress,
   Pagination,
   Card,
-  CardContent,
   Grid,
   TextField,
   FormControl,
@@ -90,17 +89,6 @@ const AssetRequests: React.FC = () => {
         status: statusFilter || undefined,
       }),
   });
-
-  // Calculate summary statistics
-  const summaryStats = useMemo(() => {
-    const requests = requestsData?.data || [];
-    const totalRequests = requests.length;
-    const approvedRequests = requests.filter((r) => r.status === 'Approved').length;
-    const pendingRequests = requests.filter((r) => r.status === 'Pending').length;
-    const rejectedRequests = requests.filter((r) => r.status === 'Rejected').length;
-
-    return { totalRequests, approvedRequests, pendingRequests, rejectedRequests };
-  }, [requestsData]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
