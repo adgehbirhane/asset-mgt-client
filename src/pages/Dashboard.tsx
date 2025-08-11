@@ -24,6 +24,7 @@ import {
   TrendingUp,
   TrendingDown,
   Approval,
+  Dashboard as DashboardIcon
 } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
@@ -163,7 +164,7 @@ const Dashboard: React.FC = () => {
     <Box>
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
         <Typography variant="h4" component="h1">
-          <Dashboard />
+          <DashboardIcon />
           Dashboard
         </Typography>
         {user?.role === 'Admin' && (
