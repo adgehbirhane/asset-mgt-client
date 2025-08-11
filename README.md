@@ -45,7 +45,7 @@ Frondend Employee Asset Management System built with React, TypeScript, Material
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/adgehbirhane/asset-mgt-client
    cd asset-mgt-client
    ```
 
